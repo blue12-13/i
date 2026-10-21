@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Hello, World!</title>
+</head>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | isi dulu sementara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+  
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .bg-dark { background-color: #030014; }
+    .gradient-text {
+      background: linear-gradient(to right, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, #3b82f6, #06b6d4);
+    }
+    .blob {
+      animation: blob 8s infinite;
+    }
+    @keyframes blob {
+      0% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+      100% { transform: translate(0px, 0px) scale(1); }
+    }
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-dark text-white overflow-x-hidden">
+    
+    <!-- Animated Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-30 blob"></div>
+    <div class="absolute top-0 -right-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 blob" style="animation-delay: 2s;"></div>
+    <div class="absolute -bottom-8 left-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-25 blob" style="animation-delay: 4s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full top-0 z-50 bg-[#030014]/50 backdrop-blur-xl border-b border-white/5">
+    <div class="mx-auto px-[5%] lg:px-[10%] flex items-center justify-between h-16">
+      <a href="#home" class="text-xl font-bold gradient-text">Badara</a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-sm font-medium hover:gradient-text transition">Home</a>
+        <a href="#about" class="text-sm font-medium hover:gradient-text transition">About</a>
+        <a href="#portfolio" class="text-sm font-medium hover:gradient-text transition">Portfolio</a>
+        <a href="#contact" class="text-sm font-medium hover:gradient-text transition">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#030014]/95 backdrop-blur-xl px-[5%] py-4 space-y-4">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#portfolio" class="block py-2">Portfolio</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center pt-20 px-[5%] lg:px-[10%]">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div class="w-full lg:w-1/2 space-y-6 z-10">
+        <div class="inline-block px-4 py-1 rounded-full gradient-bg text-xs font-semibold">Ready to grow</div>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          <span class="block">website</span>
+          <span class="gradient-text">builder</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 font-light typing">welcome to web</p>
+        <p class="text-gray-400 max-w-xl leading-relaxed">
+          menciptaksn website random dan membangun pengalaman digital yang menarik dengan teknologi modern.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">C++</span>
+          <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">JavaScript</span>
+          <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm">html</span>
+        </div>
+        <div class="flex gap-4 pt-4">
+          <a href="#portfolio" class="px-6 py-3 gradient-bg rounded-full font-semibold hover:opacity-90 transition">Projects</a>
+          <a href="#contact" class="px-6 py-3 border border-white/20 rounded-full font-semibold hover:bg-white/10 transition">about</a>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2 flex justify-center">
+        <div class="relative w-80 h-80 md:w-96 md:h-96">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl blur-3xl"></div>
+          <div class="relative z-10 w-full h-full bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center">
+            <img src="aab.jpg" alt="Foto Proyek" style="aspect-ratio: 1/; width: 100%; object-fit: cover; background: #eee;">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="contact" class="py-1 px-[5%] lg:px-[10%] relative z-10">
+    <div class="max-w-2xl mx-auto text-center">
+  <section id="about" class="py-24 px-[5%] lg:px-[10%] relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">About Me</h2>
+      <p class="text-gray-400 mb-12">Turn boredom into a digital experience</p>
+      <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12">
+        <h3 class="text-2xl font-semibold mb-4">I'm <span class="gradient-text">Afif Anwar Badara</span></h3>
+        <p class="text-gray-300 leading-relaxed text-lg">
+          Saya orang gabut yang iseng menciptakan projecs random dan ingin membangun pengalaman digital 
+        </p>
+        <div class="grid grid-cols-3 gap-6 mt-10">
+          <div>
+            <div class="text-3xl font-bold gradient-text">/</div>
+            <div class="text-sm text-gray-400"></div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold gradient-text">3</div>
+            <div class="text-sm text-gray-400">PROJECTS</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold gradient-text">\</div>
+            <div class="text-sm text-gray-400"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-1 px-[5%] lg:px-[10%] relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold gradient-text">Portfolio Showcase</h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Explore my journey through projects. Each section represents a milestone.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Project Card 1 -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition group">
+        <div class="h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl mb-4 flex items-center justify-center">
+          <img src="s.jpg" alt="Foto Proyek" style="aspect-ratio: 16/9; width: 100%; object-fit: cover; background: #eee;">
+
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Class IX H</h3>
+        <p class="text-gray-400 text-sm mb-4">ini adalah website kelas 9H angkatan tahun 2026-2027</p>
+        <div class="flex gap-3">
+          <a href="https://blue12-13.github.io/kelas/" class="text-sm gradient-text font-medium">Live Demo</a>
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Details</a>
+        </div>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition group">
+        <div class="h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl mb-4 flex items-center justify-center">
+          <img src="gamemtk.jpg" alt="Foto Proyek" style="aspect-ratio: 16/9; width: 100%; object-fit: cover; background: #eee;">
+        </div>
+        <h3 class="text-xl font-semibold mb-2">game MTK</h3>
+        <p class="text-gray-400 text-sm mb-4">ini adalah permainan hitung hitungan yang brtujuan untuk melatih kemampuan berhitung</p>
+        <div class="flex gap-3">
+          <a href="https://relaxed-syrniki-8491f1.netlify.app" class="text-sm gradient-text font-medium">Live Demo</a>
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Details</a>
+        </div>
+      </div>
+      <!-- Project Card 3 -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-500/50 transition group">
+        <div class="h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl mb-4 flex items-center justify-center">
+          <img src="color memory.jpg" alt="Foto Proyek" style="aspect-ratio: 16/9; width: 100%; object-fit: cover; background: #eee;">
+        </div>
+        <h3 class="text-xl font-semibold mb-2">color memory</h3>
+        <p class="text-gray-400 text-sm mb-4">color memory adalah suatu prmainan yang cara main nya mengingat warna dan membuat warna sebelumnya</p>
+        <div class="flex gap-3">
+          <a href="https://blue12-13.github.io/color-memory/" class="text-sm gradient-text font-medium">Live Demo</a>
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-10 px-[5%] lg:px-[10%] relative z-10">
+    <div class="max-w-2xl mx-auto text-center">
+      
+      <div class="flex justify-center gap-6 mt-108 text-2xl">
+        <a href="https://github.com/blue12-13" class="hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+        <a href="" class="hover:text-blue-400 transition"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/4_5_8_2_9/#" class="hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@EL.OVEpikir" class="hover:text-blue-400 transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-gray-500 border-t border-white/5 relative z-10">
+    <p>© 2026 badara.hak cipta dilindungi UU</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+
